@@ -1,0 +1,138 @@
+.item1 {
+    grid-area: header;
+    background-color: green;
+    height: 135px;
+}
+
+.item2 {
+    grid-area: menu;
+    position: relative;
+    z-index: 2;
+}
+
+.item3 {
+    grid-area: main;
+    color: green;
+    position: relative;
+    left: -8%;
+    top: 10%;
+    
+}
+
+
+.item4 {
+    grid-area: footer;
+    margin-top: 10%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'menu main main main main main'
+        'footer footer footer footer footer footer';
+    grid-gap: 10px;
+}
+
+/* .grid-container>div {
+    
+    text-align: center;
+    padding: 0.1px 0;
+    font-size: 30px; 
+}*/
+body{
+    margin: 0;
+    background-color: lightgrey;
+}
+#topo{
+    position: relative;
+    left: 0.3px;
+    top: -217px;
+    z-index: 0;
+}
+#menu {
+    position: relative;
+    z-index: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+table {
+    position: relative;
+    top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid darkgreen;
+    
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid green;
+    background-color: darkgreen; 
+    color: white;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {background-color: darkgreen;}
+  
+
+/* Style the header */
+.header {
+    background-color: green;
+    padding: 60px 50px;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+}
+
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+input {
+    margin: 0;
+    width: 75%;
+    padding: 10px;
+    
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    color: green;
+    background-color: #ccc;
+}
+
+.addBtn {
+    padding: 15px;
+    width: 50%;
+    background:#1eb700;
+    color:white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    top: 20px;
+    left: 32%;;
+    border-radius: 10px;
+}
+
+.addBtn:hover {
+    background-color: #95ff89;
+    color: darkgreen;
+    font-weight: bold;
+}

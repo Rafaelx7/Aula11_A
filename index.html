@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <style></style>
+</head>
+
+<body>
+    <div id="principal"></div>
+
+    <script type="text/babel">
+        class Menu extends React.Component { render() { return (
+        <div>
+            <div class="cabecalho">
+                <nav class="menu">
+                    <object width="100%" height="260px" data="menu.html"></object>
+                </nav>
+                <div class="topo">
+                    <img src="./imagens/capa.png" />
+                </div>
+            </div>
+        </div>
+        ); } } class Rodape extends React.Component{ render(){ return(
+        <div>
+            <footer class="rodape">
+                <object width="100%" data="rodape.html"></object>
+            </footer>
+        </div>
+        ); } } class Principal extends React.Component{ render(){ return(
+        <div>
+            <Menu />
+            <div class="main">
+                <div id="video">
+                    <video controls>
+                        <source src="video/video.mp4" type="video/mp4"/>
+                        <div class="clear"></div>
+                    </video>
+                </div>
+            </div>
+            <Rodape />
+        </div>
+        ); } } ReactDOM.render(
+        <Principal />, document.getElementById('principal'));
+
+    </script>
+
+
+</body>
+
+</html>

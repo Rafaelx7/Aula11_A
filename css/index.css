@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 90%;
+    background-color: lightgray;
+    margin: 0px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 130px 1fr 60px;
+    grid-template-areas: 'cabecalho''principal''rodape';
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    display: grid;
+    grid-template-rows: 40px 90px;
+    grid-template-areas: 'menu''topo';
+    z-index: 1;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: rgb(42, 44, 44);
+    z-index: 2;
+    width: 111%;
+    text-align: center;
+}
+
+.topo {
+    grid-area: topo;
+    background-color: rgb(2, 75, 2);
+    position: relative;
+    top: 7%;
+    z-index: 0;
+    width: 100%;
+    width: 111%;
+}
+
+.principal {
+    grid-area: principal;
+    height: calc(100vh-190px);
+    z-index: 0;
+}
+
+.conteudoPrincipal {
+    grid-area: conteudoPrincipal;
+    z-index: 0;
+    position: relative;
+    left: 10%;
+    display: inline-block;
+}
+
+h3 {
+    color: rgb(2, 75, 2);
+}
+
+.rodape {
+    grid-area: rodape;
+    left: 0;
+    bottom: 0;
+    width: 111.1%;
+    background-color: rgb(2, 75, 2);
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 1.01%;
+}
+
+#img-central {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    width: 200px;
+    height: 400px;
+    position: relative;
+    left: 10%;
+}
+
+#img-central:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#video {
+    text-align: center;
+    float: right;
+    position: relative;
+    top: -60px;
+}
+
+video {
+    border-radius: 30px;
+    width: 700px
+}
+
+.rodape>p {
+    position: relative;
+    top: -8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.clear {
+    clear: both;
+}
+
+#img-cnt {
+    position: relative;
+    left: 10%;
+}
+
+@media screen and (max-width: 1200px) {
+    #img-central {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 5px;
+        width: 150px;
+        height: 300px;
+        position: relative;
+        left: 37%;
+        top: 30%;
+    }
+    #img-cnt {
+        position: relative;
+        left: 33%;
+    }
+    #video {
+        text-align: center;
+        position: relative;
+        top: 10%;
+        ;
+    }
+    video {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 617px) {
+    .topo {
+        background-color: rgb(2, 75, 2);
+        position: relative;
+        top: 190.1px;
+        z-index: 0;
+        width: 111%;
+    }
+    #img-central {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 5px;
+        width: 150px;
+        height: 300px;
+        position: relative;
+        left: 37%;
+        top: 200px;
+    }
+    #img-cnt {
+        position: relative;
+        top: 200px;
+        left: 33%;
+    }
+    #video {
+        text-align: center;
+        position: relative;
+        top: 200px;
+    }
+    video {
+        width: 60%;
+    }
+    .rodape {
+        position: relative;
+        top: 200px;
+        width: 105%;
+        height: 113%;
+    }
+}
